@@ -78,10 +78,8 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
         jLabel18 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1200, 650));
         setResizable(false);
         setSize(new java.awt.Dimension(1200, 650));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 204, 153));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 650));
@@ -364,7 +362,16 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
                 .addGap(0, 69, Short.MAX_VALUE))
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 650));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         pack();
         setLocationRelativeTo(null);
@@ -576,7 +583,6 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
                     recurso_asignado=true;
                     AreaSecuencia.append("P"+Integer.toString(i+1)+" asignado\n");
                     
-                    //ans.setText("Allocated process : "+i);
                     for(int j=0;j<3;j++){
                       
                         disponibles[0][j]=disponibles[0][j]+enUso[i][j];

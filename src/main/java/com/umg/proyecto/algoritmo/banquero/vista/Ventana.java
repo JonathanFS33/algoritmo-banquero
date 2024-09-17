@@ -604,7 +604,7 @@ public class Ventana extends javax.swing.JFrame implements ActionListener {
 
         TxtSeguro.setText("\nLos recursos se asignaron correctamente");
         }
-        else{ //Deadlock is Detected and can not be avoided
+        else{
 
         TxtSeguro.setText("Ocurrió un interbloqueo");
         }
